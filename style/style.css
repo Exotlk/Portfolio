@@ -15,6 +15,7 @@
 	--index: calc(1vw+1vh);		/* HEIGHT + WIDTH */
 	--color-header: #f4efec;
 	--color-text: #cdc6c3;
+	--gallery-gap: calc(var(--index) * 5);
 }
 
 
@@ -75,12 +76,21 @@ h1,h2,h3,h4,h5,h6 {
 
 .gallery {
 	display: flex;
+	padding: calc(var(--index) * 8) 0;
 	
 }
+
 
 .gallery > * {
 	flex: 1;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+}
+
+
+
+.gallery__item {
+	max-width: calc(var(--index) * 25);
+	margin-bottom: var(--gallery-gap);
 }
